@@ -1,0 +1,74 @@
+/** Specificity: from particular to general
+* order doesn't matter in declaration inside the css file i.e:
+
+#foo {}
+div {}
+is the same that:
+div {}
+#foo {}
+
+*   1. inline
+*   2. id
+*   3. class
+*   4. type (h1, list, table, p, etc)
+*/
+
+/* Media queries */
+@media (min-width: 600px) {
+    body {
+        background-color: lightyellow;
+    }
+}
+@media (max-width: 599px) {
+    body {
+        background-color: orange;
+    }
+}
+
+h1 {
+    color: red;
+    text-align: center;
+}
+/* #: way to identify a unique element */
+#foo {
+    color: green;
+    text-align: left;
+}
+/* .: to identify a html element class */
+.right_h1 {
+    color: grey;
+    text-align: right;
+}
+div {
+    border: 3px solid black;
+    background-color: blue;
+    width: 200px;
+    height: 500px;
+    padding: 10px;  /* border inside */
+    margin: 20px;   /* border outside */
+    font-family: Arial, sans-serif; /* if not Arial, then sans-serif */
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+/* all ul that has a li child */
+ul > li {
+    color: blue;
+}
+a {
+    color: blue;
+}
+/* modify by an attribute of the element */
+a[href="https://www.youtube.com"]{
+    color: red;
+}
+button {
+    width: 250px;
+    height: 100px;
+    font-size: 24px;
+    background-color: green;
+}
+/* :hover is a pseudo class */
+button:hover {
+    background-color: orange;
+}

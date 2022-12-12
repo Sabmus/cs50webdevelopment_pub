@@ -1,0 +1,104 @@
+body {
+    padding: 10px;
+}
+
+.comment_section {
+    height: 100%;
+}
+
+.scrollable_div {
+    border: 1px solid black;
+    height: 70%;
+    width: 100%;
+    overflow: auto;
+}
+.scrollable_div > p {
+    margin: 5px 5px 10px 5px;
+    line-height: 15px;
+}
+.comment_div {
+    height: 20%;
+    padding-top: 10px;
+}
+.comment_form{
+    height: 100%;
+}
+.input_comment {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.input_comment > textarea {
+    width: 100%;
+    max-height: 50px;
+    min-height: 50px;
+    resize: none;
+}
+.com_input_1 {
+    height: 60%;
+}
+.com_input_2 {
+    height: 25%;
+}
+
+#wizard {
+    color: goldenrod;
+}
+
+.fixed_img_size {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.span_link {
+    font-size: 14px;
+}
+
+.text_footer {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+.flex_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.bid {
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.bid > input {
+    width: 100px;
+    margin-right: 5px;
+}
+.bid > select {
+    width: 90px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.bid > input[type="submit"] {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #007bff;
+    cursor: pointer;
+    width: 65px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.bid > input[type="submit"]:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.close_bid_link {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}

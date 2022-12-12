@@ -1,0 +1,120 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+{% if not message %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="{{ item.image }}" class="card-img-top fixed_img_size" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        
+                            <h5 class="card-title">
+                                {{ item.title }}
+                                {% if user.is_authenticated %}
+                                - <span class="span_link">
+                                    {% if in_watchlist %}
+                                        <a href="{% url 'remove_from_watchlist' item.slug %}">Remove from watchlist</a>
+                                    {% else %}
+                                        <a href="{% url 'add_to_watchlist' item.slug %}">Add to watchlist</a>
+                                    {% endif %}
+                                    
+                                </span>
+                                {% endif %}
+                            </h5>
+                            <p class="card-text">{{ item.description }}</p>
+                            <p class="card-text">Current bid:
+                                {% if last_bid %}
+                                    {{ last_bid.amount }} {{ last_bid.currency }}
+                                {% else %}
+                                    {{ item.starting_bid }} {{ item.currency }}
+                                {% endif %}
+                            </p>
+                            <p class="card-text">Available until: {{ item.last_until }}</p>
+                            
+                            {% if user.is_authenticated %}
+                                {% if item.active %}
+                                <div>
+                                    <form action="{% url 'bid_item' item.slug %}" method="post">
+                                        {% csrf_token %}
+                                        <div class="flex_container">
+                                            <div class="bid">
+                                                {{ bid_form.amount }}
+                                            </div>
+                                            <div class="bid">
+                                                {{ bid_form.currency }}
+                                            </div>
+                                            <div class="bid">
+                                                <input type="submit" value="Place Bid">
+                                            </div>
+                                            {% if user == item.owner %}
+                                            <div class="bid">
+                                                <a href="{% url 'close_bid' item.slug %}" class="close_bid_link">Close Bid</a>
+                                            </div>
+                                            {% endif %}
+                                        </div>
+                                    </form>
+        
+                                    {% if error_message %}
+                                        {{ error_message }}
+                                    {% endif %}
+                                </div>
+                                {% else %}
+                                    <p>Bid Ended.</p>
+                                    {% if user == last_bid.bidder %}
+                                        <p>¡You won the Bid!</p>
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+        
+        
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="card-footer text-muted">
+                            <p class="text_footer">Listed by: <span id="wizard">{{ item.owner }}</span> on {{ item.category.name }} category</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <h3 style="height: 10%;">Comments</h3>
+
+            <div class="scrollable_div">
+                {% for comment in comments %}
+                    <p>{{ comment }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="comment_div">
+                <form action="{% url 'add_comment' item.slug %}" method="post" class="comment_form">
+                    {% csrf_token %}
+                    <div class="input_comment com_input_1">
+                        {{ comment_form.description }}
+                    </div>
+                    <div class="input_comment com_input_2">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+                
+        </div>
+    </div>
+</div>
+
+{% else %}
+    {{ message }}
+{% endif %}
+
+{% endblock %}

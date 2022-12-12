@@ -1,0 +1,109 @@
+<!-- Specifications: https://cs50.harvard.edu/web/2020/projects/0/search/#specification -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Advance Search</title>
+
+        <link rel="stylesheet" href="advance_search_styles.css">
+    </head>
+    <body>
+        <div class="top_div">
+            <div class="top_div_left">
+                <span class="span_google_logo"></span>
+            </div>
+            <div class="top_div_right">
+                <a href="index.html">Google Search</a>
+            </div>
+        </div>
+
+        <div class="lower_top_div">
+            <div class="advance_search_tittle">
+                <label class="label_tittle">Búsqueda avanzada</label>
+            </div>
+        </div>
+
+        <div class="input_div">
+            <form action="https://www.google.com/search" method="get">
+                <div class="form_row row0">
+                    <div class="form_col0 col0">
+                        <span>Mostrar páginas que contengan...</span>
+                    </div>
+                    <div class="form_col1">
+                    </div>
+                    <div class="form_col2 col2">
+                        <span>Para hacer esto en el cuadro de búsqueda</span>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_col0">
+                        <label for="allthiswords">todas estas palabras:</label>
+                    </div>
+                    <div class="form_col1 col11">
+                        <input class="inputs" type="text" name="as_q" id="as_q_id" autofocus=True>
+                    </div>
+                    <div class="form_col2 col22">
+                        Ingresa las palabras importantes <span class="span_col2">Terrier ratonero tricolor</span> .
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_col0">
+                        <label for="allthiswords">esta palabra o frase exactas::</label>
+                    </div>
+                    <div class="form_col1 col11">
+                        <input class="inputs" type="text" name="as_epq" id="as_epq_id">
+                    </div>
+                    <div class="form_col2 col22">
+                        Ingresa las palabras exactas entre comillas: <span class="span_col2">"Terrier ratonero"</span> .
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_col0">
+                        <label for="allthiswords">cualquiera de estas palabras:</label>
+                    </div>
+                    <div class="form_col1 col11">
+                        <input class="inputs" type="text" name="as_oq" id="as_oq_id">
+                    </div>
+                    <div class="form_col2 col22">
+                        Ingresa <span>OR</span> entre las palabras que desees: <span class="span_col2">En miniatura OR estándar</span> .
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_col0">
+                        <label for="allthiswords">ninguna de estas palabras:</label>
+                    </div>
+                    <div class="form_col1 col11">
+                        <input class="inputs" type="text" name="as_eq" id="as_eq_id">
+                    </div>
+                    <div class="form_col2 col22">
+                        Ingresa un signo menos justo delante de las palabras que no deseas que aparezcan:
+                        <span class="span_col2">-Roedor, -"Jack Russell"</span> .
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="form_col0">
+
+                    </div>
+                    <div class="form_col1">
+                        <div class="input_div">
+                            <input type="submit" class="input_submit" value="Advance search">
+                        </div>
+                    </div>
+                    <div class="form_col2">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>
+

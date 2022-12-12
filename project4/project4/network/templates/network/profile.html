@@ -1,0 +1,42 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block script %} 
+    <script src="{% static 'network/post_data.js' %}"></script> 
+    <script src="{% static 'network/profile.js' %}"></script> 
+{% endblock script %}
+
+{% block body %}
+    <div class="general">
+        <div id="profile_data">
+            <div id="username_div">
+                <span id="username">{{ username }}</span>'s profile
+            </div>
+
+            <div id="follows">
+                <div id="followers">{{ follower }}</div>
+                <span>followers</span>
+            </div>
+            
+            <div id="follows">
+                {{ following }}
+                <span>following</span>    
+            </div>
+            
+            {% if can_follow and not is_follower %}
+                <a id="anchor_follow" href="">Follow?</a>
+            {% elif can_follow and is_follower %}
+                <a id="anchor_follow" href="">Unfollow?</a>
+            {% endif %}
+        </div>
+
+        <div style="margin-bottom: 20px;"><hr></div>
+        
+        
+        <div id="posts">
+        </div>
+        
+        <div id="pagination_div">
+        </div>
+    </div>
+{% endblock %}

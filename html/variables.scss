@@ -1,0 +1,32 @@
+/*
+this type of file "sass" need to be compile in order to work.
+that's because web browser don't recognize sass as a valida css file.
+
+It's necessary to install sass an then run this command in the terminal: sass sass_file.scss:css_file.css
+also, for not having to run constantly the command, we can add --watch, so: sass --watch sass_file.scss:css_file.css
+*/
+
+$color_red: red;
+
+ul {
+    font-size: 14px;
+    color: $color_red;
+}
+
+ol {
+    font-size: 28px;
+    color: $color_red;
+}
+
+/* sass also allow us to nest element */
+div {
+    font-size: 10px;
+
+    p {
+        color: blue;
+    }
+
+    ul {
+        color: green;
+    }
+}

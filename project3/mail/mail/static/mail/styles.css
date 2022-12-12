@@ -1,0 +1,75 @@
+textarea {
+    min-height: 400px;
+}
+
+.email_div {
+    border: 1px solid rebeccapurple;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: -1px 0 -1px 0;
+}
+.email_div:hover {
+    border: 2px solid blue;
+}
+.ptag {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+.sender {
+    font-weight: bold;
+    margin-left: 5px;
+}
+.a-email {
+    margin-left: 10px;
+}
+.timestamp {
+    float: right;
+    margin-right: 10px;
+}
+
+.email-data > p {
+    margin: 0;
+    padding: 0;
+}
+.email-data > p > span {
+    font-weight: bold;
+}
+
+#sub-emails-view {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.div_email_info {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+.div_archive_btn {
+    flex-basis: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+.email_div {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: -1px 0 -1px 0;
+}
+.btn_div {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: -1px 0 -1px 0;
+    justify-content: center;
+}
+.btn_div > button {
+    flex-grow: 1;
+    max-width: 90%;
+    height: 40px;
+}

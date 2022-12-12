@@ -1,0 +1,132 @@
+body {
+    background-color:rgba(32,33,36,1);
+    font: 13px/27px Roboto,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top_div {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    height: 60px;
+    box-sizing: border-box;
+}
+.top_div_left {
+    flex: 1 1 auto;
+}
+.top_div_right {
+    flex: 0 0 auto;
+}
+.top_div_right > a {
+    color: white;
+    text-decoration: none;
+}
+.top_div_right > a:hover {
+    text-decoration: underline;
+}
+.span_google_logo {
+    content: url(https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_light_clr_74x24px.svg);
+    opacity: 0.87;
+    padding: 16px 0 0 14px;
+}
+
+.label_tittle {
+    margin: 0;
+    border: 0;
+    font-size: 20px;
+    color: #f28b82;
+    padding-left: 10px
+}
+.lower_top_div {
+    display: flex;
+    border-bottom: 1px solid #3c4043;
+    max-height: 77px;
+}
+.advance_search_tittle {
+    padding-top: 2px;
+    margin: 25px 35px;
+}
+
+.input_div {
+    margin: 40px 45px;
+    max-width: 1140px;
+    min-width: 200px;
+    width: 96%;
+}
+.form_row {
+    display: flex;
+    color: #bdc1c6;
+    margin-bottom: 13px;
+    align-items: center;
+}
+.row0 {
+    margin-bottom: 7px;
+    color: #e8eaed;
+}
+
+.form_col0 {
+    min-width: 167px;
+    width: 16%;
+}
+.form_col1 {
+    min-width: 167px;
+    width: 50%;
+}
+.form_col2 {
+    width: 33%;
+    margin-left: 12px;
+}
+
+.col0 {
+    font-size: 16px;
+    line-height: 18px;
+}
+.col11 {
+    border: 1px solid #5f6368;
+    border-radius: 1px;
+}
+.col2 {
+    font-weight: bold;
+    padding: 0 11px 5px 0;
+}
+.col22 {
+    color: #969ba1;
+    line-height: 12px;
+    font-size: 11px;
+}
+
+.inputs {
+    width: 90%;
+    background: #202124;
+    border: 0;
+    height: 25px;
+    color: #bdc1c6;
+    font-size: 13px;
+    padding: 1px 8px;
+    outline: none;
+}
+.span_col2 {
+    font-family: monospace;
+    font-size: 11px;
+    color: #dadce0;
+}
+.form_col1 > .input_div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+}
+.input_submit {
+    background: #8ab4f8;
+    border-color: #8ab4f8;
+    color: #202124;
+    height: 30px;
+    min-width: 120px;
+}
+.input_div > input:hover {
+    background: #aecbfa;
+    border: 1px solid #2f5bb7;
+}

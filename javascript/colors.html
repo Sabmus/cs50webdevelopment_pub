@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            document.querySelectorAll('button').forEach(function(button){
+                button.onclick = function() {
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                };
+            });
+            
+            document.querySelector('select').onchange = function() {
+                document.querySelector('#hello').style.color = this.value;  // "this" here refeer that the thing that receive the event, en this case: <select>
+            }
+
+            /* arrow notation for functions:
+                document.querySelectorAll('button').forEach(function(button){
+                    button.onclick = function() {
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    };
+                });
+
+                is the same that:
+
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = () => {
+                        document.querySelector('#hello').style.color = button.dataset.color;
+                    };
+                });
+            */
+
+        });
+    </script>
+</head>
+<body>
+    <h1 id="hello">Hello</h1>
+    <button data-color="red">Red</button>
+    <button data-color="green">Green</button>
+    <button data-color="blue">Blue</button>
+
+    <select>
+        <option value="black">Black</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+</body>
+</html>

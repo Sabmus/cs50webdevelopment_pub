@@ -1,0 +1,27 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Watchlist</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Starting Bid</th>
+                <th>Current Bid</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in watchlisted %}
+            <tr>
+                <td><a href="{% url 'item_listed' item.slug %}">{{ item.title }}</a></td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.starting_bid }} {{ item.currency }}</td>
+                <td>{{ item.last_bid.amount }} {{ item.last_bid.currency }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

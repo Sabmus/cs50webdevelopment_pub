@@ -1,0 +1,28 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Entry
+{% endblock %}
+
+{% block body %}
+    {% if message %}
+        <div class="alert alert-danger" role="alert">
+          {{ message }}
+        </div>
+    {% endif %}
+
+    <form action="{% url 'new_entry' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group col-sm-6 col-md-4 col-lg-4">
+            <label for="title_id">Title</label>
+            <input type="text" class="form-control" id="title_id" name="title" placeholder="Harvard">
+        </div>
+        <div class="form-group col-sm-6 col-md-4 col-lg-4">
+            <label for="content_id">Content</label>
+            <textarea class="form-control" id="content_id" name="content" rows="10"
+                      placeholder="CS50’s Web Programming with Python and JavaScript"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}

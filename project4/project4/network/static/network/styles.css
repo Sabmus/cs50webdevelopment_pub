@@ -1,0 +1,116 @@
+.body {
+    display: flex;
+    justify-content: center;
+}
+.general {
+    width: 500px;
+}
+@media (max-width: 400px){
+    .general {
+        width: 100%;
+    }
+}
+.separator {
+    margin: 5px auto;
+}
+.general {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px 15px 15px;
+}
+#pagination_div {
+    display: flex;
+    justify-content: center;
+}
+#nav_pages {
+    margin: 0;
+    padding: 0;
+}
+.pagination {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+#new_post_form {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    margin-top: 5px;
+    float: right;
+}
+
+#posts {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.post_author {
+    display: inline-block;
+    color: goldenrod;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.post_author:hover {
+    color: orangered;
+    text-decoration: none;
+}
+.article_post {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.ptag_datetime {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+.fotter_post {
+    display: flex;
+    justify-content: space-between;
+}
+.likes {
+    margin-left: 5px;
+}
+
+.bi {
+    fill: lightcoral;
+}
+.bi:hover {
+    fill: rgb(255, 73, 73);
+}
+.like_section {
+    user-select: none;
+}
+
+#profile_data {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 10px;
+    align-items: end;
+}
+#follows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 20px;
+}
+#username_div {
+    font-size: 15px;
+    font-style: italic;
+    color: gray;
+}
+#username {
+    font-size: 30px;
+    font-style: italic;
+    color: goldenrod;
+    margin: 0;
+    padding: 0;
+}
+
+.action_div > *{
+    margin-left: 10px;
+    padding: 0;
+}

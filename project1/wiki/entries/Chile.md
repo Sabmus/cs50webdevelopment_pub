@@ -1,0 +1,1 @@
+Chile is a country located in South America. It has around 20M people, and along its territory, many kinds of weather can be found. Viva Chile!
